@@ -37,10 +37,14 @@ function undoInput() {
   if (display.length < 1) clearScreen();
 }
 
-screen.addEventListener('click', getDisplay);
-clear.addEventListener('click', clearScreen);
-undo.addEventListener('click', undoInput);
-equal.addEventListener('click', getResult);
+function setupEventListeners() {
+  screen.addEventListener('click', getDisplay);
+  clear.addEventListener('click', clearScreen);
+  undo.addEventListener('click', undoInput);
+  equal.addEventListener('click', getResult);
+}
+
+setupEventListeners();
 
 // Footer date - Updated automatically
 
